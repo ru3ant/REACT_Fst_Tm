@@ -1,7 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const el = <h1>h!W</h1>; //jsX - el = React.createElement('h1', null, 'h!W');
+const el = (
+  <div>
+    <h1>ToDo App</h1>
+    <input placeholder="search" />
+    <ul>
+      <li>Important Do</li>
+      <li>More important</li>
+    </ul>
+  </div>
+);
 
 const divRoot = document.getElementById("root");
 ReactDOM.render(el, divRoot);
