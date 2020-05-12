@@ -8,9 +8,9 @@ import TodoList from "./components/todo-list";
 const App = () => {
   //пример массива из объектов
   const todoData = [
-    { label: "Important", important: false },
-    { label: "More important", important: true },
-    { label: "Very very important", important: false }
+    { label: "Important", important: false, id: 1 },
+    { label: "More important", important: true, id: 2 },
+    { label: "Very very important", important: false, id: 3 }
   ];
   return (
     <div>
