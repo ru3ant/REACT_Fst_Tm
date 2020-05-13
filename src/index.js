@@ -4,22 +4,28 @@ import ReactDOM from "react-dom";
 import AppHeader from "./components/app-header";
 import SearchPanel from "./components/search-panel";
 import TodoList from "./components/todo-list";
+import ItemStatusFilter from "./components/item-status-filter";
+
+import "./index.css";
 
 const App = () => {
-  //пример массива из объектов
   const todoData = [
-    { label: "Important", important: false, id: 1 },
-    { label: "More important", important: true, id: 2 },
-    { label: "Very very important", important: false, id: 3 }
+    { label: "Drink Coffee", important: false, id: 1 },
+    { label: "Make Awesome App", important: true, id: 2 },
+    { label: "Have a lunch", important: false, id: 3 }
   ];
+
   return (
-    <div>
-      <AppHeader />
-      <SearchPanel />
+    <div className="todo-app">
+      <AppHeader toDo={1} done={3} />
+      <div className="top-panel d-flex">
+        <SearchPanel />
+        <ItemStatusFilter />
+      </div>
+
       <TodoList todos={todoData} />
     </div>
   );
 };
 
-const divRoot = document.getElementById("root");
-ReactDOM.render(<App />, divRoot);
+ReactDOM.render(<App />, document.getElementById("root"));
